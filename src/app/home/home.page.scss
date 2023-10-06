@@ -1,4 +1,4 @@
-@use "../../styles/responsive" as responsive; // Adjust the path to match your project structure and alias as needed
+@use "../../styles/responsive" as responsive;
 
 .hero-text-container {
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .hero {
-  background-color: #896af9;
+  background-color: #ab95f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +21,6 @@
   flex-direction: column;
 }
 
-.subscription-btn {
-  max-width: 100px;
-}
 .hero-content {
   max-width: 80%;
   justify-content: center;
@@ -36,34 +33,35 @@
 }
 
 .content {
-  background-size: cover; /* Optional: Adjust background size as needed */
   background-color: #fff9e6;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   flex-direction: column;
-  padding:  56px 12px;
+  padding: 56px 12px;
   @include responsive.lg-screen {
-    background-image: url("/assets/images/hiw-bg.png");
+    background-image: url("/assets/images/hiw-bg.svg");
+    background-size: cover;
     padding: 112px 64px;
   }
   gap: 24px;
   &-header {
-    @include responsive.lg-screen{
-      max-width: 66%;
+    @include responsive.lg-screen {
+      max-width: 656px;
     }
   }
 }
 
 .step {
+  flex: 1;
   &-container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     margin-top: 80px;
     gap: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 48px;
     @include responsive.lg-screen {
       flex-direction: row;
       gap: 28px;
@@ -79,5 +77,56 @@
   }
   &-sub-title {
     font-size: 16px;
+  }
+}
+
+.footer {
+  padding: 48px 20px;
+  @include responsive.lg-screen {
+    padding: 80px 64px;
+  }
+  &-content {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include responsive.lg-screen {
+      flex-direction: row;
+    }
+  }
+  &-links {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin-bottom: 32px;
+    @include responsive.lg-screen {
+      flex-direction: row;
+    }
+  }
+  &-sub-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+    @include responsive.lg-screen {
+      display: none;
+    }
+  }
+
+  &-sub-button {
+    background: white;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  &-sub-input {
+    padding: 12px;
+  }
+  &-logo {
+    @include responsive.lg-screen {
+      display: none;
+    }
   }
 }

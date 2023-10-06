@@ -41,14 +41,14 @@ a {
 }
 
 ion-header {
-  --ion-background-color: #896af9;
+  --ion-background-color: #ab95f9;
 }
 
 ion-title {
   color: white;
 }
 
-.mb-title__x-large {
+.mb-title__x-lg {
   font-size: 40px;
   font-weight: 900;
   @include responsive.lg-screen() {
@@ -57,7 +57,7 @@ ion-title {
   }
 }
 
-.mb-title__large {
+.mb-title__lg {
   font-weight: 700;
   font-size: 40px;
   @include responsive.lg-screen {
@@ -65,7 +65,7 @@ ion-title {
     font-size: 48px;
   }
 }
-.mb-title__medium {
+.mb-title__md {
   font-size: 24px;
   font-weight: 700;
   @include responsive.lg-screen {
@@ -74,7 +74,7 @@ ion-title {
   }
 }
 
-.mb-text__large {
+.mb-text__lg {
   font-size: 20px;
   @include responsive.lg-screen {
     font-size: 24px;
@@ -84,6 +84,37 @@ ion-title {
   font-size: 16px;
 }
 
+.mb-text__sm {
+  font-size: 14px;
+}
+
+.mb-text__xs {
+  font-size: 12px;
+}
 .mb-bold {
   font-weight: 700;
+}
+.mb-semi-bold {
+  font-weight: 600;
+}
+
+a {
+  color: black;
+}
+
+// button
+.mb-btn {
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #896af9;
+  border-radius: 12px;
+  background-color: white;
+  border: 1px solid #896af9;
+  box-shadow: 4px 4px 0px -1px #896af9;
+  @include responsive.lg-screen {
+      padding: 15px 26px;
+      border-radius: 21px;
+    font-size: 23px;
+  }
 }
