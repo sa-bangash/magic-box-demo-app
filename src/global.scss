@@ -10,13 +10,15 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
+@use "./styles/responsive" as responsive;
+
 @import "@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
@@ -24,3 +26,64 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+a {
+  font-family: "Nunito", sans-serif;
+}
+
+ion-header {
+  --ion-background-color: #896af9;
+}
+
+ion-title {
+  color: white;
+}
+
+.mb-title__x-large {
+  font-size: 40px;
+  font-weight: 900;
+  @include responsive.lg-screen() {
+    font-size: 56px;
+    font-weight: 900;
+  }
+}
+
+.mb-title__large {
+  font-weight: 700;
+  font-size: 40px;
+  @include responsive.lg-screen {
+    font-weight: 700;
+    font-size: 48px;
+  }
+}
+.mb-title__medium {
+  font-size: 24px;
+  font-weight: 700;
+  @include responsive.lg-screen {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+.mb-text__large {
+  font-size: 20px;
+  @include responsive.lg-screen {
+    font-size: 24px;
+  }
+}
+.mb-text {
+  font-size: 16px;
+}
+
+.mb-bold {
+  font-weight: 700;
+}
