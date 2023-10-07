@@ -91,6 +91,10 @@ ion-title {
 .mb-text__xs {
   font-size: 12px;
 }
+.mb-text__xs-gray {
+  font-size: 12px;
+  color: #838383;
+}
 .mb-bold {
   font-weight: 700;
 }
@@ -113,8 +117,31 @@ a {
   border: 1px solid #896af9;
   box-shadow: 4px 4px 0px -1px #896af9;
   @include responsive.lg-screen {
-      padding: 15px 26px;
-      border-radius: 21px;
+    padding: 15px 26px;
+    border-radius: 21px;
     font-size: 23px;
   }
+}
+
+.mb-input {
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 10px 14px;
+}
+.mb-select {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border: none;
+  padding: 10px 14px;
+  border-right: 16px solid transparent;
+  outline: 1px solid #d0d5dd;
+}
+.mb-lable {
+  font-weight: 500;
+  font-size: 14px;
+  color: #344054;
+  font-family: Nunito;
 }

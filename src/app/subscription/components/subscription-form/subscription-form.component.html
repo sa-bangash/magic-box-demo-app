@@ -1,0 +1,59 @@
+<div class="form">
+  <div class="form-header">
+    <div class="form-header__title">Subscribe</div>
+    <div class="form-header__sub-title">to our Monthly Surprise Box</div>
+  </div>
+  <div class="form-content">
+    <div class="form-section">
+      <div class="form-section__title">Contact Information</div>
+      <div class="form-item">
+        <label for="name" class="label">Your Name</label>
+        <input
+          type="text"
+          class="mb-input"
+          id="name"
+          placeholder="e.g Osama Alshathri"
+        />
+      </div>
+      <div class="form-item">
+        <label for="email" class="form-item__label">Email</label>
+        <input
+          type="email"
+          class="form-item__input mb-input"
+          id="email"
+          placeholder="Osama@gmail.com"
+        />
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section__title">Child’s Information</div>
+      <div class="form-item">
+        <label for="child-name" class="label">Child’s Full Name</label>
+        <input
+          type="text"
+          class="mb-input"
+          id="child-name"
+          placeholder="e.g Sarah Mohammad"
+        />
+      </div>
+      <div class="form-item">
+        <label for="email" class="form-item__label">Grade</label>
+        <select class="mb-select" placeholder="e.g Grade 2">
+          <option>Grade 1</option>
+          <option>Grade 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section__title">As a parent select any 3 topics</div>
+      <div class="topic-container">
+        <app-chip label="Arabic"></app-chip>
+        <app-chip label="Islamic"></app-chip>
+        <app-chip label="English"></app-chip>
+        <app-chip label="History"></app-chip>
+        <app-chip label="Sports"></app-chip>
+      </div>
+    </div>
+  </div>
+  <button class="mb-btn">Continue to payment</button>
+</div>

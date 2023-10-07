@@ -1,0 +1,26 @@
+@use "../../styles/responsive" as responsive;
+.container {
+  margin-top: 128px;
+  border-radius: 24px;
+  border: 1px solid #bfb8d7;
+  margin: 102px 16px;
+  overflow: hidden;
+
+  @include responsive.lg-screen {
+    display: flex;
+    margin: 150px auto;
+    max-width: 1020px;
+  }
+}
+
+
+app-subscription-form {
+  @include responsive.lg-screen {
+    width: 60%;
+  }
+}
+app-summary {
+  @include responsive.lg-screen {
+    width: 40%;
+  }
+}
