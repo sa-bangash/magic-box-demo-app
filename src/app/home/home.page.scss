@@ -1,34 +1,36 @@
 @use "../../styles/responsive" as responsive;
 
-.hero-text-container {
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  text-align: center;
-  align-items: center;
-  gap: 24px;
-  @include responsive.lg-screen() {
-    max-width: 70%;
-  }
-}
-
 .hero {
   background-color: #ab95f9;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 32px 16px;
+  padding: 96px 16px 56px;
+  @include responsive.lg-screen{
+    padding: 132px 16px 112px;
+  }
   flex-direction: column;
-}
 
-.hero-content {
-  max-width: 80%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  img {
-    margin-top: 80px;
+  &-content {
+    max-width: 80%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin-top: 80px;
+    }
+  }
+  &-text-container {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    gap: 24px;
+    @include responsive.lg-screen() {
+      max-width: 70%;
+    }
   }
 }
 
