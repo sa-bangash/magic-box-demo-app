@@ -3,8 +3,8 @@ import { IonicModule } from '@ionic/angular';
 import { SummaryComponent } from './components/summary/summary.component';
 import { SubscriptionFormComponent } from './components/subscription-form/subscription-form.component';
 import { FormBuilder, Validators } from '@angular/forms';
-import { SubscriptionService } from '../services/subscription.service';
-import { SubscriptionDTO } from '../dto/subscription.dto';
+import { SubscriptionService } from '../../services/subscription.service';
+import { SubscriptionDTO } from '../../dto/subscription.dto';
 import { SubscriptionFormService } from './service/subscription-form.service';
 
 @Component({

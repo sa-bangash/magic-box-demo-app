@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import { SubscriptionPage } from './subscription.page';
 import { SubscriptionFormService } from './service/subscription-form.service';
-import { SubscriptionService } from '../services/subscription.service';
+import { SubscriptionService } from '../../services/subscription.service';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
-import { SubscriptionDTO } from '../dto/subscription.dto';
+import { SubscriptionDTO } from '../../dto/subscription.dto';
 
 describe('SubscriptionPage', () => {
   let component: SubscriptionPage;
