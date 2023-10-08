@@ -1,4 +1,4 @@
-<div class="form">
+<form [formGroup]="form" class="form" (ngSubmit)="onClickSubmit()">
   <div class="form-header">
     <div class="form-header__title">Subscribe</div>
     <div class="form-header__sub-title">to our Monthly Surprise Box</div>
@@ -9,6 +9,7 @@
       <div class="form-item">
         <label for="name" class="label">Your Name</label>
         <input
+          formControlName="name"
           type="text"
           class="mb-input"
           id="name"
@@ -18,6 +19,7 @@
       <div class="form-item">
         <label for="email" class="form-item__label">Email</label>
         <input
+        formControlName="email"
           type="email"
           class="form-item__input mb-input"
           id="email"
@@ -30,20 +32,21 @@
       <div class="form-item">
         <label for="child-name" class="label">Child’s Full Name</label>
         <input
+          formControlName="childName"
           type="text"
           class="mb-input"
           id="child-name"
           placeholder="e.g Sarah Mohammad"
         />
       </div>
-      <div class="form-item">
+      <div formGroupName="dob" class="form-item">
         <label for="date" class="form-item__label">Child’s Date of Birth</label>
         <div class="dob-input-container">
-          <select class="mb-select" placeholder="Date" id="date">
+          <select formControlName="date" class="mb-select" placeholder="Date" id="date">
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
-          <select class="mb-select" placeholder="Month">
+          <select formControlName="month" class="mb-select" placeholder="Month">
             <option value="1">January</option>
             <option value="2">February</option>
             <option value="3">March</option>
@@ -57,7 +60,7 @@
             <option value="11">November</option>
             <option value="12">December</option>
           </select>
-          <select class="mb-select" placeholder="Year">
+          <select formControlName="year" class="mb-select" placeholder="Year">
             <option value="2023">2023</option>
             <option value="2022">2022</option>
             <option value="2021">2021</option>
@@ -68,22 +71,22 @@
       </div>
       <div class="form-item">
         <label for="email" class="form-item__label">Grade</label>
-        <select class="mb-select" placeholder="e.g Grade 2">
-          <option>Grade 1</option>
-          <option>Grade 2</option>
+        <select formControlName="grade" class="mb-select" placeholder="e.g Grade 2">
+          <option value="1">Grade 1</option>
+          <option value="2">Grade 2</option>
         </select>
       </div>
     </div>
     <div class="form-section">
       <div class="form-section__title">As a parent select any 3 topics</div>
       <div class="topic-container">
-        <app-chip label="Arabic"></app-chip>
-        <app-chip label="Islamic"></app-chip>
-        <app-chip label="English"></app-chip>
-        <app-chip label="History"></app-chip>
-        <app-chip label="Sports"></app-chip>
+        <app-chip
+          *ngFor="let topic of topics$ | async"
+          [topic]="topic"
+          (selectedChange)="onSelectChange($event)"
+        ></app-chip>
       </div>
     </div>
   </div>
-  <button class="mb-btn">Continue to payment</button>
-</div>
+  <button  type="submit" class ="mb-btn">Continue to payment</button>
+</form>

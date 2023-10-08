@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-summary',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary.component.scss'],
   standalone: true,
 })
-export class SummaryComponent implements OnInit {
-  constructor() {}
+export class SummaryComponent {
+  @Output()
+  onSubmit = new EventEmitter();
 
-  ngOnInit() {}
+  onClickSumit() {
+    this.onSubmit.emit();
+  }
 }

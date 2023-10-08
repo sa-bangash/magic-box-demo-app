@@ -1,6 +1,9 @@
 <ion-content>
   <div class="container">
-    <app-subscription-form></app-subscription-form>
-    <app-summary></app-summary>
+    <app-subscription-form
+      [form]="form"
+      (onSubmit)="onSubmit()"
+    ></app-subscription-form>
+    <app-summary (onSubmit)="onSubmit()"></app-summary>
   </div>
 </ion-content>
