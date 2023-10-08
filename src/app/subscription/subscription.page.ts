@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { SummaryComponent } from './components/summary/summary.component';
 import { SubscriptionFormComponent } from './components/subscription-form/subscription-form.component';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { SubscriptionService } from '../services/subscription.service';
 import { SubscriptionDTO } from '../dto/subscription.dto';
 
@@ -26,9 +26,9 @@ export class SubscriptionPage {
 
   private getForm() {
     return this.fb.nonNullable.group({
-      name: [''],
-      email: [''],
-      childName: [''],
+      name: ['',Validators.required],
+      email: ['',[Validators.required,Validators.email]],
+      childName: ['',[Validators.required]],
       dob: this.fb.nonNullable.group({
         date: [''],
         month: [''],

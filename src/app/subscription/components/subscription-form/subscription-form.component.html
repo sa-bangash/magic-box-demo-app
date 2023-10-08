@@ -15,6 +15,11 @@
           id="name"
           placeholder="e.g Osama Alshathri"
         />
+        <div class="form-error-container">
+          <div *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">
+            Name is required.
+          </div>
+        </div>
       </div>
       <div class="form-item">
         <label for="email" class="form-item__label">Email</label>
@@ -25,6 +30,14 @@
           id="email"
           placeholder="Osama@gmail.com"
         />
+        <div class="form-error-container">
+          <div *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched" class="error-message">
+            Email is required.
+          </div>
+          <div *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched" class="error-message">
+            Please enter a valid email address.
+          </div>
+        </div>
       </div>
     </div>
     <div class="form-section">
@@ -38,6 +51,11 @@
           id="child-name"
           placeholder="e.g Sarah Mohammad"
         />
+        <div class="form-error-container">
+          <div *ngIf="form.get('childName')?.hasError('required') && form.get('childName')?.touched" >
+            Child name is required.
+          </div>
+        </div>
       </div>
       <div formGroupName="dob" class="form-item">
         <label for="date" class="form-item__label">Child’s Date of Birth</label>
