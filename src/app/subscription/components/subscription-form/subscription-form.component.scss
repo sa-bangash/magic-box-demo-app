@@ -53,3 +53,12 @@ button {
   margin-top: 72px;
   margin-bottom: 32px;
 }
+
+.dob-input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  select {
+    flex: 1;
+  }
+}

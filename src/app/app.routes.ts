@@ -8,8 +8,8 @@ export const routes: Routes = [
   {
     path: 'subscription',
     loadComponent: () =>
-      import('./subscription/subscription.component').then(
-        (m) => m.SubscriptionComponent
+      import('./subscription/subscription.page').then(
+        (m) => m.SubscriptionPage
       ),
   },
   {
