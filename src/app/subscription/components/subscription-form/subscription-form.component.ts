@@ -2,14 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import {
   FormArray,
-  FormBuilder,
   FormControl,
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
-  Validators,
 } from '@angular/forms';
-import { SubscriptionDTO } from 'src/app/dto/subscription.dto';
 import { SubscriptionService } from 'src/app/services/subscription.service';
 import { ChipComponent } from 'src/app/shared';
 import { ChipToggleModel } from 'src/app/shared/ui-component/chip/chip.model';

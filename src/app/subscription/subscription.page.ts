@@ -5,6 +5,7 @@ import { SubscriptionFormComponent } from './components/subscription-form/subscr
 import { FormBuilder, Validators } from '@angular/forms';
 import { SubscriptionService } from '../services/subscription.service';
 import { SubscriptionDTO } from '../dto/subscription.dto';
+import { SubscriptionFormService } from './service/subscription-form.service';
 
 @Component({
   selector: 'app-subscription',
@@ -14,28 +15,13 @@ import { SubscriptionDTO } from '../dto/subscription.dto';
   imports: [IonicModule, SummaryComponent, SubscriptionFormComponent],
 })
 export class SubscriptionPage {
-  private readonly fb = inject(FormBuilder);
+  private readonly subscriptionForm = inject(SubscriptionFormService);
   private readonly subscriptionService = inject(SubscriptionService);
-  readonly form = this.getForm();
+  readonly form = this.subscriptionForm.getForm();
 
   onSubmit() {
     console.log(this.form.value);
     const formValue = this.form.value;
-    this.subscriptionService.createSubscriptoin(formValue as SubscriptionDTO);
-  }
-
-  private getForm() {
-    return this.fb.nonNullable.group({
-      name: ['',Validators.required],
-      email: ['',[Validators.required,Validators.email]],
-      childName: ['',[Validators.required]],
-      dob: this.fb.nonNullable.group({
-        date: [''],
-        month: [''],
-        year: [''],
-      }),
-      grade: [''],
-      topics: this.fb.array<string>([]),
-    });
+    this.subscriptionService.createSubscriptoin(formValue as SubscriptionDTO).subscribe()
   }
 }
