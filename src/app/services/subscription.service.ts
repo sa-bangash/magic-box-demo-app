@@ -12,7 +12,7 @@ export class SubscriptionService {
     return of(TOPIC_STUB);
   }
 
-  createSubscriptoin(sub: SubscriptionDTO) {
+  createSubscription(sub: SubscriptionDTO) {
     return of(sub);
   }
 }

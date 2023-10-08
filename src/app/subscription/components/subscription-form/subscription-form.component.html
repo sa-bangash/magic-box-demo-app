@@ -100,7 +100,7 @@
       <div class="topic-container">
         <app-chip
           *ngFor="let topic of topics$ | async"
-          [topic]="topic"
+          [item]="topic"
           (selectedChange)="onSelectChange($event)"
         ></app-chip>
       </div>

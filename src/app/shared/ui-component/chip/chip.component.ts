@@ -10,19 +10,15 @@ import { ChipModel, ChipToggleModel } from './chip.model';
   imports: [CommonModule],
 })
 export class ChipComponent {
-  @Input() topic!: ChipModel;
+  @Input() item!: ChipModel;
   @Output() selectedChange = new EventEmitter<ChipToggleModel>();
   selected = false;
 
   toggleChip(): void {
     this.selected = !this.selected;
     this.selectedChange.emit({
-      id: this.topic.id,
+      id: this.item.id,
       select: this.selected,
     });
   }
-
-  onSelect() {}
-
-  onUnSelect() {}
 }

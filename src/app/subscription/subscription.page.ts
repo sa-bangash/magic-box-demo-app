@@ -22,6 +22,6 @@ export class SubscriptionPage {
   onSubmit() {
     console.log(this.form.value);
     const formValue = this.form.value;
-    this.subscriptionService.createSubscriptoin(formValue as SubscriptionDTO).subscribe()
+    this.subscriptionService.createSubscription(formValue as SubscriptionDTO).subscribe()
   }
 }
