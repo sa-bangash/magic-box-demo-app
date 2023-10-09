@@ -114,6 +114,11 @@ a {
     border-radius: 21px;
     font-size: 23px;
   }
+  &:active{
+    background-color: #896af9;
+    color:#fff;
+    box-shadow: none;
+  }
 }
 
 .mb-input {
@@ -137,4 +142,8 @@ a {
   font-size: 14px;
   color: #344054;
   font-family: Nunito;
+}
+
+.header-md {
+  box-shadow: none;
 }

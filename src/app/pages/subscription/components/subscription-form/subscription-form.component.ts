@@ -20,9 +20,7 @@ import { ChipToggleModel } from 'src/app/shared/ui-component/chip/chip.model';
 export class SubscriptionFormComponent {
   @Input()
   form!: FormGroup;
-  @Output()
-  readonly onSubmit = new EventEmitter();
-
+  
   private readonly subscriptionService = inject(SubscriptionService);
   readonly topics$ = this.subscriptionService.fetchTopics();
 
@@ -37,9 +35,5 @@ export class SubscriptionFormComponent {
 
   get topicCtrl() {
     return this.form.get('topics') as FormArray;
-  }
-
-  onClickSubmit() {
-    this.onSubmit.emit();
   }
 }

@@ -35,12 +35,6 @@ describe('SubscriptionFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should emit onSubmit when the form is submitted', () => {
-    spyOn(component.onSubmit, 'emit');
-    component.onClickSubmit();
-    expect(component.onSubmit.emit).toHaveBeenCalled();
-  });
-
   it('should toggle topics when onSelectChange is called', () => {
     const chipToggleModel: ChipToggleModel = {
       id: 1,

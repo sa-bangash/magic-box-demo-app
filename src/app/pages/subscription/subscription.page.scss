@@ -13,7 +13,6 @@
   }
 }
 
-
 app-subscription-form {
   @include responsive.lg-screen {
     width: 60%;
@@ -22,5 +21,24 @@ app-subscription-form {
 app-summary {
   @include responsive.lg-screen {
     width: 40%;
+  }
+}
+
+.sub-button {
+  &__summary {
+    width: 100%;
+    margin-top: 20px;
+    max-width: 450px;
+    @include responsive.lg-screen {
+      display: none;
+    }
+  }
+  &__form {
+    width: 100%;
+    margin-top: 40px;
+    display: none;
+    @include responsive.lg-screen {
+      display: inline;
+    }
   }
 }

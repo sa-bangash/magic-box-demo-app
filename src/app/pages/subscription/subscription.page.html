@@ -1,9 +1,10 @@
 <ion-content>
   <div class="container">
-    <app-subscription-form
-      [form]="form"
-      (onSubmit)="onSubmit()"
-    ></app-subscription-form>
-    <app-summary (onSubmit)="onSubmit()"></app-summary>
+    <app-subscription-form [form]="form" >
+      <button type="submit" (click)="onSubmit()" class="mb-btn sub-button__form ">Continue to payment</button>
+    </app-subscription-form>
+    <app-summary>
+      <button type="submit"  (click)="onSubmit()" class="mb-btn sub-button__summary" >Continue to payment</button>
+    </app-summary>
   </div>
 </ion-content>
